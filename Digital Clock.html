@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<style>
+html{
+    background-color: #000000;
+    color: #00cec9;
+    font-size: 50px;
+    margin: auto;
+}
+.clock {
+    text-align: center;
+    margin: auto;
+    height: auto;
+    width: auto;
+
+    font-family:monospace;
+}
+</style>
+<html>
+<head></head>
+
+<body>
+    <h1 class = "clock">Digital Clock</h1>
+<div class = "page">
+<p class = "clock" id = "result1"></p>
+<p class = "clock" id = "result2"></p>
+</div>
+</body>
+
+<script>
+var variable1 = setInterval(setTime, 1);
+var variable2 = setInterval(setDate, 1);
+
+function setDate() {
+    var day = new Date();
+    document.getElementById("result1").innerHTML = day.toLocaleDateString();
+}
+function setTime() {
+    var time = new Date();
+    document.getElementById("result2").innerHTML = time.toLocaleTimeString();
+}
+
+</script>
+
+    </html>
